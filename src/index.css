@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.headerBar::before {
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: #444649;
+}
+
+.headerBar {
+  width: 70px;
+  height: 4px;
+  background: #444649;
+}
+
+.icons {
+ z-index: 9999;
+}
+
+.progress {
+  height: 35px;
+
+}
+.progress .skill {
+  font: normal 12px "Open Sans Web";
+  line-height: 35px;
+  padding: 0;
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+}
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  margin: 0 20px 0 0;
+}
+
+.progress-bar {
+  text-align: left;
+  transition-duration: 3s;
+}
+
+.anchorLink {
+  margin: 8px;
+  color: gray;
+}
+
+.anchorLink:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.anchorLink:active {  
+  color:Black ;
+  font-weight:bold;
+}
+
+.projectButton:focus {
+  background-color: blue;
+}
