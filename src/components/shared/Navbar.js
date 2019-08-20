@@ -15,6 +15,7 @@ const NavBar = () => {
           <AnchorLink className="anchorLink" href="#home">Home</AnchorLink>
           <AnchorLink className="anchorLink" href='#about'>About</AnchorLink>
           <AnchorLink className="anchorLink" href='#project'>Portfolio</AnchorLink>
+          <a className="anchorLink" href="Resume.pdf" target="_blank">Resume</a>
           <AnchorLink className="anchorLink" href="#contact">Contact</AnchorLink>
         </Nav>
       </Navbar.Collapse>

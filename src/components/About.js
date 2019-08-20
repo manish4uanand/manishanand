@@ -10,10 +10,10 @@ const About = () => {
       width: '50%'
     },
     icon: { 
-      left: '40%',
+      left: '42%',
       fontSize: '50px',
       color: 'white',
-      top: '13%',
+      top: '17%',
       position: 'absolute'
     },
 

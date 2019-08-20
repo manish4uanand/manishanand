@@ -14,6 +14,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/noImage_RzmXEqLGa.jpeg',
     title: "YSG Properties",
+    technologyUsed: "Ruby on Rails + MySQL",
     company: "Bitla Software Pvt. Ltd.",
     client: "YSG properties, Nigeria, West Africa (Bangalore : Onsite)",
     duration: "Jan 2013 to Jul 2013",
@@ -24,6 +25,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/ts2_kTJSHNzgK.png',
     title: "Ticket Simply",
+    technologyUsed: "Ruby on Rails + MySQL",
     company: "Bitla Software Pvt. Ltd.",
     client: "Bitlasoft Product (Bangalore : Onsite)",
     duration: "Aug 2013 to Mar 2014",
@@ -34,6 +36,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/hs2_n2Kuc5zcz.png',
     title: "Hotel Simply",
+    technologyUsed: "Ruby on Rails + MySQL",
     company: "Bitla Software Pvt. Ltd.",
     client: "Bitlasoft Product (Bangalore : Onsite)",
     duration: "Apr 2014 to Jan 2015",
@@ -44,6 +47,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/noImage_RzmXEqLGa.jpeg',
     title: "mVerso",
+    technologyUsed: "Ruby on Rails + MySQL",
     company: "smartData Enterprises (I) Ltd.",
     client: "mverso (Mohali : Onsite)",
     duration: "Feb 2015 to Oct 2015",
@@ -54,6 +58,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/f1_E-li2t4ey.jpeg',
     title: "Fassos Platform",
+    technologyUsed: "Ruby on Rails + MySQL",
     company: "Faasos",
     client: "Faasos (Mumbai : Onsite)",
     duration: "Dec 2015 to Mar 2016",
@@ -64,6 +69,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/crm_BXllQ2XRm.png',
     title: "CRM(Customer Relationship Management)",
+    technologyUsed: "Ruby on Rails + MySQL",
     company: "Faasos",
     client: "Faasos (Mumbai : Onsite)",
     duration: "Apr 2016 to Jan 2017",
@@ -74,6 +80,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/gu_keTgF69abQ.png',
     title: "GeniusU Platform",
+    technologyUsed: "Ruby on Rails + PostgreSQL",
     company: "GeniusU Web Services Pvt. Ltd.",
     client: "GeniusU Web Services Pvt. Ltd. (Mumbai : Onsite)",
     duration: "Sep 2017 to Apr 2018",
@@ -84,6 +91,7 @@ state = {
     type: "ruby",
     url: 'https://ik.imagekit.io/n6yhgitvy/arrivae_DTnXX0Nd5o.png',
     title: "Arrivae",
+    technologyUsed: "Ruby on Rails + PostgreSQL",
     company: "Singularity Furniture Pvt. Ltd. (arrivae)",
     client: "Arrivae",
     duration: "Aug 2018 to Mar 2019",
@@ -135,18 +143,19 @@ renderImages = () => {
     return (
       <MDBCol md="4" key={image.id}>
         <figure>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
                 <img src={image.url} 
                   alt="Gallery" 
                   className="img-fluid"                   
                   onMouseOver={this.handleMouseOver}
                   />
               </div>
-              <div class="flip-card-back">
+              <div className="flip-card-back">
                 <div>
-                  <p style={{'marginTop':'30%'}}>{image.title}</p>
+                  <h5 style={{'marginTop':'30%'}}>{image.title}</h5>
+                  <p className="text-danger">{image.technologyUsed}</p>
                   <Button className="flipActionButton" onClick={()=> this.setState({ selectedProject: image, isOpen: true })}>Learn More</Button>
                 </div>
               </div>              
@@ -162,55 +171,62 @@ render() {
 const { index, selectedProject } = this.state;
   return (
     <React.Fragment>
-      <MDBContainer className="mt-5" id="project">
-        <div>
-          <br/>
-        </div>
-        <h2 className="font-weight-bold my-5 text-center">MY PROJECTS</h2>
-        <Row className="mb-2">
-          <Col></Col>
-          <Col>
-            <Tabs value={index} onChange={this.handleChange}>
-              <Tab label="ALL" />
-              <Tab label="RUBY/RAILS" />
-              <Tab label="REACTJS" />
-            </Tabs>
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex} >
-            <div className="mdb-lightbox" style={{'overflow-x': 'hidden'}}>
-              <MDBRow>
-                {this.renderImages()}
-              </MDBRow>
-            </div>
-            <div className="mdb-lightbox">
-              <MDBRow>
-                {this.renderImages()}
-              </MDBRow>
-            </div>
-            <div className="mdb-lightbox">
-              <MDBRow>
-                {this.renderImages()}
-              </MDBRow>
-            </div>            
-          </SwipeableViews>
-        </Row>
-      </MDBContainer>
-      <Modal show={this.state.isOpen} onHide={this.handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{selectedProject.title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <img src={selectedProject.url} alt={selectedProject.title} style={{'width': '100%'}}/>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <div className="mt-5">
+        <MDBContainer id="project">
+          <div>
+            <br/>
+          </div>
+          <h2 className="font-weight-bold my-5 text-center">MY PROJECTS</h2>
+          <Row className="mb-2">
+            <Col></Col>
+            <Col>
+              <Tabs value={index} onChange={this.handleChange}>
+                <Tab label="ALL" />
+                <Tab label="RUBY/RAILS" />
+                <Tab label="REACTJS" />
+              </Tabs>
+            </Col>
+            <Col></Col>
+          </Row>
+          {/* <Row> */}
+            <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex} >
+              <div className="mdb-lightbox" style={{'overflow': 'hidden'}}>
+                <MDBRow>
+                  {this.renderImages()}
+                </MDBRow>
+              </div>
+              <div className="mdb-lightbox" style={{'overflow': 'hidden'}}>
+                <MDBRow>
+                  {this.renderImages()}
+                </MDBRow>
+              </div>
+              <div className="mdb-lightbox" style={{'overflow': 'hidden'}}>
+                <MDBRow>
+                  {this.renderImages()}
+                </MDBRow>
+              </div>            
+            </SwipeableViews>
+          {/* </Row> */}
+        </MDBContainer>
+        <Modal size="lg" show={this.state.isOpen} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>{selectedProject.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <img src={selectedProject.url} alt={selectedProject.title} style={{'width': '100%'}}/>
+            <hr/>
+            <div><b>Company: </b>{selectedProject.company}</div>
+            <div><b>Client: </b>{selectedProject.client}</div>
+            <hr/>
+            <div className="text-secondary">{selectedProject.description}</div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
     </React.Fragment>
     );
   }
