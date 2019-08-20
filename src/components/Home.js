@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import NavBar from '../components/shared/Navbar';
-import { Container, Row, Col } from 'react-bootstrap';
-import About from '../components/About'
 
 
 class Home extends Component {
@@ -37,7 +34,6 @@ class Home extends Component {
     }
     return(
       <React.Fragment>
-        {/* <NavBar /> */}
         <div id="home">
           <div style={styles.body}>            
             <p className="text-white" style={styles.text_centered}>

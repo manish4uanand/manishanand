@@ -1,44 +1,219 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import { Modal, Row, Col, Button } from 'react-bootstrap';
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import SwipeableViews from 'react-swipeable-views';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
-const Project = () => {
-  return(
-    <Container id="project" className="mb-2">
-      <div>
-        <br/>
-      </div>
-      <Row className="justify-content-md-center" style={{'margin-top': '50px'}}>
-        <Col className="text-center">
-          <div className="animated slideInLeft delay-2s">
-            <h2 className="">PROJECTS</h2>
-            <div className="m-auto headerBar"></div>
-          </div>
-        </Col>
-      </Row>
-      <Row className="mt-4 justify-content-md-center text-center">      
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">          
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#" style={{'width':'155px'}}>ALL</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style={{'width':'155px'}}>RUBY/RAILS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style={{'width':'155px'}}>REACT</a>
-              </li>              
-            </ul>
-          </div>
-        </nav>
-      </Row>
-    </Container>
-  )
+var sorted = [];
+class Project extends React.Component {
+state = {
+  images: [ {
+    id: 1,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/noImage_RzmXEqLGa.jpeg',
+    title: "YSG Properties",
+    company: "Bitla Software Pvt. Ltd.",
+    client: "YSG properties, Nigeria, West Africa (Bangalore : Onsite)",
+    duration: "Jan 2013 to Jul 2013",
+    description: "YSG properties has been rated as one of the biggest complex in West Africa. No wonder to say, that we are maintaining the one of the top most company in property called YSG(young shall Grow) which consists more than 1500 properties* for Rent all around West Africa. Our Software Designed in such a way that helps the company to maintain the huge date base of Tenants and properties. We have a Flexible Billing structure which is completely satisfied by the customer on posting invoices to tenants. So far we achieved a lot but still we aims at bringing more comfort to our Beloved Clients and customers." 
+  },
+  {
+    id: 2,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/ts2_kTJSHNzgK.png',
+    title: "Ticket Simply",
+    company: "Bitla Software Pvt. Ltd.",
+    client: "Bitlasoft Product (Bangalore : Onsite)",
+    duration: "Aug 2013 to Mar 2014",
+    description: "This is an Cloud based application for Travels Management. Ticket Simply takes a unique approach to Simplify Travels Management by automating and cutting down all the error prone & expensive mundane day-to-day tasks. Communicate & follow up easily with all your business partners & passengers in growing your net revenues and building loyalty. Interface with your passengers directly by having on-line presence to allow ticket booking."
+  },
+  {
+    id: 3,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/hs2_n2Kuc5zcz.png',
+    title: "Hotel Simply",
+    company: "Bitla Software Pvt. Ltd.",
+    client: "Bitlasoft Product (Bangalore : Onsite)",
+    duration: "Apr 2014 to Jan 2015",
+    description: "This is a Cloud based Property Management Software. This Project is mainly subdivided into two separate parts, one is system side and another is for user (hotelier) side which consists of different modules. First part is the Registration module, which is used to register the hotels by sales & implementation people and the Second part is the Login module, where a registered hotelier can access the application and do the bookings and all which are needful."
+  },
+  {
+    id: 4,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/noImage_RzmXEqLGa.jpeg',
+    title: "mVerso",
+    company: "smartData Enterprises (I) Ltd.",
+    client: "mverso (Mohali : Onsite)",
+    duration: "Feb 2015 to Oct 2015",
+    description: "mVerso is the technology leader in mobile engagement. Our marketing cloud empowers companies to acquire and nurture mobile connections with intelligent services and applications that allow customers to take action in their immediate context and moments of need."
+  },
+  {
+    id: 5,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/f1_E-li2t4ey.jpeg',
+    title: "Fassos Platform",
+    company: "Faasos",
+    client: "Faasos (Mumbai : Onsite)",
+    duration: "Dec 2015 to Mar 2016",
+    description: "Faasos platform is mainly used to manage the whole functionality of an order, either it directly comes from the mobile app or website or from customer support or directly punched on faasos store. This project is mainly divided into four parts. First parts is for admin side where at the admin can login and do their respective work like inventory creation, driver creation, store creation etc. Second part is for the store manager where the store manager can login and access the application and do all the needfull related to an order. The third part of the application is used by the inventory management guy and the fourth is for customer care guy."
+  },
+  {
+    id: 6,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/crm_BXllQ2XRm.png',
+    title: "CRM(Customer Relationship Management)",
+    company: "Faasos",
+    client: "Faasos (Mumbai : Onsite)",
+    duration: "Apr 2016 to Jan 2017",
+    description: "Customer Escalation is ready to use application for managing the escalation generated by the customer. This application is mainly in two parts. The first part of the application is for admin where they can do the settings related to manage the escalation. And the second part of the application is for the store and for their upper-level guys. This application is mainly to track the escalation which comes from the customer and then we can take the right steps in order to fix the customer problems. And also, here we can have the track of the feedback of the customer."
+  },
+  {
+    id: 7,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/gu_keTgF69abQ.png',
+    title: "GeniusU Platform",
+    company: "GeniusU Web Services Pvt. Ltd.",
+    client: "GeniusU Web Services Pvt. Ltd. (Mumbai : Onsite)",
+    duration: "Sep 2017 to Apr 2018",
+    description: "GeniusU is the entrepreneur education platform."
+  },
+  {
+    id: 8,
+    type: "ruby",
+    url: 'https://ik.imagekit.io/n6yhgitvy/arrivae_DTnXX0Nd5o.png',
+    title: "Arrivae",
+    company: "Singularity Furniture Pvt. Ltd. (arrivae)",
+    client: "Arrivae",
+    duration: "Aug 2018 to Mar 2019",
+    description: "Arrivae is a customized full home interior solution provider that enables you to get the house you always wanted, at the most convenient for you."
+  }
+  ],
+  index: 0,
+  isOpen: false,
+  selectedProject: ''
+};
+
+handleChange = (event, value) => {  
+  this.setState({
+    index: value
+  })
+};
+
+handleChangeIndex = index => {
+  console.log(index);
+  this.setState({
+    index
+  });
+};
+
+handleClose = () => {
+  this.setState({
+    isOpen: false
+  })
+};
+handleShow = () => {
+  this.setState({
+    isOpen: true
+  })
+}
+handleMouseOver = () => {
+  
+}
+renderImages = () => {
+  let photoIndex = -1;
+  const { index } = this.state;  
+  if(index === 1){
+    sorted = this.state.images.filter((i) => i.type === 'ruby');
+  }else if(index === 2){
+    sorted = this.state.images.filter((i) =>  i.type === 'react')
+  }else{
+    sorted = this.state.images;
+  }
+  return sorted.map(image => {
+    return (
+      <MDBCol md="4" key={image.id}>
+        <figure>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src={image.url} 
+                  alt="Gallery" 
+                  className="img-fluid"                   
+                  onMouseOver={this.handleMouseOver}
+                  />
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <p style={{'marginTop':'30%'}}>{image.title}</p>
+                  <Button className="flipActionButton" onClick={()=> this.setState({ selectedProject: image, isOpen: true })}>Learn More</Button>
+                </div>
+              </div>              
+            </div>
+          </div>  
+        </figure>
+      </MDBCol>
+      );
+  })
+}
+
+render() {
+const { index, selectedProject } = this.state;
+  return (
+    <React.Fragment>
+      <MDBContainer className="mt-5" id="project">
+        <div>
+          <br/>
+        </div>
+        <h2 className="font-weight-bold my-5 text-center">MY PROJECTS</h2>
+        <Row className="mb-2">
+          <Col></Col>
+          <Col>
+            <Tabs value={index} onChange={this.handleChange}>
+              <Tab label="ALL" />
+              <Tab label="RUBY/RAILS" />
+              <Tab label="REACTJS" />
+            </Tabs>
+          </Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex} >
+            <div className="mdb-lightbox" style={{'overflow-x': 'hidden'}}>
+              <MDBRow>
+                {this.renderImages()}
+              </MDBRow>
+            </div>
+            <div className="mdb-lightbox">
+              <MDBRow>
+                {this.renderImages()}
+              </MDBRow>
+            </div>
+            <div className="mdb-lightbox">
+              <MDBRow>
+                {this.renderImages()}
+              </MDBRow>
+            </div>            
+          </SwipeableViews>
+        </Row>
+      </MDBContainer>
+      <Modal show={this.state.isOpen} onHide={this.handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedProject.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img src={selectedProject.url} alt={selectedProject.title} style={{'width': '100%'}}/>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </React.Fragment>
+    );
+  }
 }
 
 export default Project;
