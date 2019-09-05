@@ -96,7 +96,18 @@ state = {
     client: "Arrivae",
     duration: "Aug 2018 to Mar 2019",
     description: "Arrivae is a customized full home interior solution provider that enables you to get the house you always wanted, at the most convenient for you."
-  }
+  },
+  {
+    id: 9,
+    type: "react",
+    url: 'https://ik.imagekit.io/n6yhgitvy/office_oSs7Z0c-s.png',
+    title: "offices",
+    technologyUsed: "ReactJS",
+    company: "Singularity Furniture Pvt. Ltd. (arrivae)",
+    client: "Arrivae",
+    duration: "June 2019 to September 2019",
+    description: "Office project is for Operational Manager and Project Manager in order to manage the going on projects for offices."
+  }  
   ],
   index: 0,
   isOpen: false,
@@ -176,7 +187,8 @@ const { index, selectedProject } = this.state;
           <div>
             <br/>
           </div>
-          <h2 className="font-weight-bold my-5 text-center">MY PROJECTS</h2>
+          <h2 className="font-weight-bold text-center">MY PROJECTS</h2>
+          <div className="m-auto headerBar"></div>
           <Row className="mb-2">
             <Col></Col>
             <Col>
