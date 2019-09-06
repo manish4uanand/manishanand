@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class Home extends Component {
 
   state = {
@@ -37,7 +36,7 @@ class Home extends Component {
         <div id="home">
           <div style={styles.body}>            
             <p className="text-white" style={styles.text_centered}>
-              <span>Hello, I'm <b className="text-danger">Manish Anand.</b></span><br/>
+              <span>Hello, I'm <b className="text-danger font-weight-bold">Manish Anand</b>.</span><br/>
               <span>I'm a full-stack web developer.</span>
             </p>            
           </div>          

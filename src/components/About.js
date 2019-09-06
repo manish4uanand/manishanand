@@ -30,7 +30,7 @@ const About = () => {
       <Row className="justify-content-md-center" style={{'marginTop': '50px'}}>
         <Col className="text-center">
           <div className="animated slideInLeft delay-2s">
-            <h2 className="">ABOUT</h2>
+            <h2 className="font-weight-bold">ABOUT</h2>
             <div className="m-auto headerBar"></div>
           </div>
         </Col>
@@ -73,7 +73,7 @@ const About = () => {
           <img src="https://ik.imagekit.io/n6yhgitvy/imgonline-com-ua-shape-MfF3Zb8gozimMci4_r62xgoJU2.png" alt="Manish" width="50%"/>
           <h4 className="mt-2">Who's this guy?</h4>
           <p>
-            I'm the Tech Lead for <a href="https://arrivae.com" target="_blank" rel="noreferrer">Arrivae</a> in Mumbai, OR. 
+            I'm the Tech Lead for <a href="https://arrivae.com" target="_blank" rel="noreferrer">Arrivae</a> in Mumbai. 
             I have serious passion for creating intuitive, dynamic user experiences.<br/> 
             Let's make something special.
           </p>
@@ -123,7 +123,7 @@ const About = () => {
           <br/>
           <div className="progress">
             <div style={{'backgroundColor': '#00AAFF', 'padding': '9px', 'width': '75px'}}>
-              React
+              ReactJS
             </div>
             <div className="progress-bar  animated slideInLeft delay-2s" role="progressbar" style={{width: '40%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}> &nbsp; 40%</div>
           </div>

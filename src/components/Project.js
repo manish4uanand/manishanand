@@ -23,7 +23,7 @@ state = {
   {
     id: 2,
     type: "ruby",
-    url: 'https://ik.imagekit.io/n6yhgitvy/ts2_kTJSHNzgK.png',
+    url: 'https://ik.imagekit.io/n6yhgitvy/TS_1ALajjUJg-.jpg',
     title: "Ticket Simply",
     technologyUsed: "Ruby on Rails + MySQL",
     company: "Bitla Software Pvt. Ltd.",
@@ -56,7 +56,7 @@ state = {
   {
     id: 5,
     type: "ruby",
-    url: 'https://ik.imagekit.io/n6yhgitvy/f1_E-li2t4ey.jpeg',
+    url: 'https://ik.imagekit.io/n6yhgitvy/FAASOS_fvy_QiHdw.jpg',
     title: "Fassos Platform",
     technologyUsed: "Ruby on Rails + MySQL",
     company: "Faasos",
@@ -185,6 +185,7 @@ const { index, selectedProject } = this.state;
       <div className="mt-5">
         <MDBContainer id="project">
           <div>
+            <br/>
             <br/>
           </div>
           <h2 className="font-weight-bold text-center">MY PROJECTS</h2>
