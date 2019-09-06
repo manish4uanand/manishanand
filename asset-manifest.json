@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/manish4uanand/manishanand/static/css/main.55e1ffab.chunk.css",
-    "main.js": "/manish4uanand/manishanand/static/js/main.cc380727.chunk.js",
-    "main.js.map": "/manish4uanand/manishanand/static/js/main.cc380727.chunk.js.map",
-    "runtime~main.js": "/manish4uanand/manishanand/static/js/runtime~main.0eaa4f03.js",
-    "runtime~main.js.map": "/manish4uanand/manishanand/static/js/runtime~main.0eaa4f03.js.map",
-    "static/js/2.4870bbf7.chunk.js": "/manish4uanand/manishanand/static/js/2.4870bbf7.chunk.js",
-    "static/js/2.4870bbf7.chunk.js.map": "/manish4uanand/manishanand/static/js/2.4870bbf7.chunk.js.map",
-    "index.html": "/manish4uanand/manishanand/index.html",
-    "precache-manifest.b78b2df787717493976f4d6bc9d61d17.js": "/manish4uanand/manishanand/precache-manifest.b78b2df787717493976f4d6bc9d61d17.js",
-    "service-worker.js": "/manish4uanand/manishanand/service-worker.js",
-    "static/css/main.55e1ffab.chunk.css.map": "/manish4uanand/manishanand/static/css/main.55e1ffab.chunk.css.map"
+    "main.css": "/manishanand/static/css/main.55e1ffab.chunk.css",
+    "main.js": "/manishanand/static/js/main.bc26fe44.chunk.js",
+    "main.js.map": "/manishanand/static/js/main.bc26fe44.chunk.js.map",
+    "runtime~main.js": "/manishanand/static/js/runtime~main.06c7b5af.js",
+    "runtime~main.js.map": "/manishanand/static/js/runtime~main.06c7b5af.js.map",
+    "static/js/2.4870bbf7.chunk.js": "/manishanand/static/js/2.4870bbf7.chunk.js",
+    "static/js/2.4870bbf7.chunk.js.map": "/manishanand/static/js/2.4870bbf7.chunk.js.map",
+    "index.html": "/manishanand/index.html",
+    "precache-manifest.1275bc4b546c2fd0583eea68b06b202a.js": "/manishanand/precache-manifest.1275bc4b546c2fd0583eea68b06b202a.js",
+    "service-worker.js": "/manishanand/service-worker.js",
+    "static/css/main.55e1ffab.chunk.css.map": "/manishanand/static/css/main.55e1ffab.chunk.css.map"
   }
 }
